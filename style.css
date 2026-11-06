@@ -40,11 +40,9 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline
 .skip-link:focus { top: 12px; }
 .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid var(--line); background: var(--bg); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(20px); }
 .header-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 16px; white-space: nowrap; }
-.brand-mark { font-size: 29px; font-weight: 850; letter-spacing: -2px; line-height: 1; }
-.brand-dot, .accent-dot { color: var(--accent); }
-.brand-divider { height: 19px; width: 1px; background: var(--line); }
-.brand-caption { color: var(--muted); font-size: 12px; letter-spacing: .1em; }
+.home-link { font-size: 13px; font-weight: 700; white-space: nowrap; color: var(--text); transition: color .2s; }
+.home-link:hover { color: var(--accent); }
+.accent-dot { color: var(--accent); }
 .main-nav { display: flex; align-items: center; gap: 36px; margin-left: auto; }
 .main-nav a { font-size: 13px; color: var(--muted); font-weight: 600; transition: color .2s; }
 .main-nav a:hover, .text-link:hover, .site-footer a:hover { color: var(--accent); }
@@ -56,9 +54,6 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--focus); outline
 html[data-theme="dark"] .moon-icon { display: none; }
 html[data-theme="dark"] .sun-icon { display: block; }
 .hero { display: grid; grid-template-columns: 164px minmax(0, 1fr); align-items: center; gap: clamp(28px, 4.3vw, 54px); padding-block: 82px 88px; min-height: 0; }
-.eyebrow, .section-index { font-size: 11px; letter-spacing: .15em; font-weight: 800; text-transform: uppercase; color: var(--accent); }
-.eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 12px; }
-.eyebrow-line { width: 27px; height: 1px; background: var(--accent); }
 .hero h1 { max-width: 850px; margin: 0; font-size: clamp(30px, 3.5vw, 44px); font-weight: 750; line-height: 1.16; letter-spacing: -.045em; }
 .hero-role { max-width: 680px; font-size: clamp(16px, 1.7vw, 19px); font-weight: 500; line-height: 1.55; letter-spacing: -.02em; margin: 13px 0 8px; }
 .hero-intro { max-width: 670px; color: var(--muted); font-size: 14px; margin: 0; }
@@ -78,7 +73,7 @@ html[data-theme="dark"] .sun-icon { display: block; }
 .section-rule { height: 1px; background: var(--line); }
 .section { padding-block: 95px 105px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 32px; }
-.section-index { margin: 0 0 17px; }
+.section-index { margin: 0 0 17px; font-size: 11px; letter-spacing: .15em; font-weight: 800; text-transform: uppercase; color: var(--accent); }
 .section h2, .contact-section h2 { margin: 0; font-size: clamp(32px, 3.7vw, 46px); letter-spacing: -.052em; line-height: 1.2; font-weight: 760; }
 .section-lead { color: var(--muted); max-width: 610px; margin: 15px 0 0; font-size: 14px; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-size: 13px; font-weight: 700; transition: color .2s; }
@@ -159,7 +154,6 @@ html[data-theme="dark"] .art-tasks { background: #293442; color: #c0d0df; }
 @media (max-width: 720px) {
   .container { width: min(100% - 36px, 540px); }
   .header-inner { min-height: 70px; gap: 14px; }
-  .brand-caption, .brand-divider { display: none; }
   .main-nav { gap: 15px; }
   .main-nav a { font-size: 11px; }
   .header-actions { gap: 5px; }
@@ -178,7 +172,6 @@ html[data-theme="dark"] .art-tasks { background: #293442; color: #c0d0df; }
   .footer-inner { padding-block: 24px; flex-wrap: wrap; }
 }
 @media (max-width: 390px) {
-  .brand-mark { font-size: 25px; }
   .main-nav { gap: 9px; }
   .main-nav a { font-size: 10px; }
   .header-inner { gap: 8px; }
