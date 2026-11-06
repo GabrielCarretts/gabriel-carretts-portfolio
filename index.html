@@ -1,119 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Carlos Gabriel</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/564a6f860a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Portfólio de Carlos Gabriel Leite Carretts. Projetos em C#, C++, HTML, CSS e JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carlos Gabriel — Portfólio">
+  <meta property="og:description" content="Projetos de desenvolvimento de software, lógica e interfaces web.">
+  <title>Carlos Gabriel — Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      const storedTheme = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme = storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch (_) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <div class="profile-image"><img src="img/foto-curriculo.jpeg" alt="Photo of Carlos Gabriel"></div>
-        <div>
-            <h1>Carlos Gabriel Leite Carretts</h1>
-            <h2>Aspiring Software Developer</h2>
-            <h4>Lages - SC, Brazil</h4>
+  <a class="skip-link" href="#main" data-i18n="skip">Pular para o conteúdo</a>
 
-            <ul class="contact-list">
-                <li><a href="https://wa.me/5541991378709" target="_blank" title="Chat with me on WhatsApp"><i class="fa-solid fa-square-phone"></i></a></li>
-                <li><a href="mailto:gabrielcarretts@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-                <li><a href="https://github.com/GabrielCarretts" target="_blank"><i
-                            class="fa-brands fa-github-alt"></i></a>
-                </li>
-            </ul>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="home-link" href="#inicio" data-i18n="navHome">Início</a>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>
-            I am an Information Systems student driven by a curiosity for how software works under the hood. Currently
-            focused on mastering programming logic through hands-on projects, I enjoy turning complex concepts into
-            clean, functional code using tools like C++ and HTML/CSS. </p>
-    </section>
+      <nav class="main-nav" aria-label="Navegação principal" data-i18n-aria="navLabel">
+        <a href="#projetos" data-i18n="navProjects">Projetos</a>
+        <a href="#sobre" data-i18n="navAbout">Sobre</a>
+        <a href="#contato" data-i18n="navContact">Contato</a>
+      </nav>
 
-    <div class="columns">
-        <section id="education">
-            <h2>Education</h2>
-            <ul class="education-list">
-                <li><strong>Applied Informatics for Professional Environments</strong> <br> SENAI</li>
-                <li><strong>Studying Information Systems</strong> <br> UNIPLAC (1st semester)</li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="grids">
-                <div class="languages">
-                    <h3>Languages</h3>
-                    <ul class="skills-list">
-                        <li>HTML (beginner)</li>
-                        <li>C++ (beginner)</li>
-                    </ul>
-                </div>
-                <div class="tools">
-                    <h3>Tools</h3>
-                    <ul class="skills-list">
-                        <li>Git (beginner)</li>
-                        <li>VS Code (beginner)</li>
-                    </ul>
-                </div>
-                <div class="soft-skills">
-                    <h3>Abilities</h3>
-                    <ul class="skills-list">
-                        <li>English (fluent)</li>
-                        <li>Problem solving</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+      <div class="header-actions">
+        <button class="utility-button lang-button" id="language-toggle" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
+        <button class="utility-button theme-button" id="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false" title="Ativar modo escuro">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
+      </div>
     </div>
+  </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <p><strong>Here are some of the projects I've worked on to practice my programming skills:</strong></p>
-            <div class="projects-list">
-                <article>
-                    <h2><strong>C++ Calculator</strong></h2>
-                    <img src="img/calculator.png" alt="C++ Calculator">
-                    <p>A simple command-line calculator built in C++ that performs basic arithmetic operations. It runs in a loop, allowing multiple calculations, and changes the output color based on whether the result is positive, negative, or zero.</p>
-                    <ul>
-                        <li>C++</li>
-                        <li>Control Flow (if/else)</li>
-                        <li>Loops (do-while)</li>
-                        <li>ANSI Terminal Colors</li>
-                    </ul>
-                    <h3><a href="https://github.com/GabrielCarretts/Faculdade-C-plus-plus/tree/main/simple_calculator"
-                            target="_blank">View Project</a></h3>
-                </article>
-                <article>
-                    <h2><strong>C++ Temperature converter</strong></h2>
-                    <img src="img/temperature-converter.png" alt="C++ Temperature converter">
-                    <p>A C++ command-line program that converts temperatures between Celsius and Fahrenheit using a menu-based interface, with support for multiple conversions in a single run.</p>
-                    <ul>
-                        <li>C++</li>
-                        <li>Menu Logic</li>
-                        <li>Mathematical Operators</li>
-                        <li>Loops</li>
-                    </ul>
-                    <h3><a href="https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/temperature_converter"
-                            target="_blank">View Project</a></h3>
-                </article>
-            </div>
+  <main id="main">
+    <section class="hero container" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="img/foto-curriculo.jpeg" alt="Retrato de Carlos Gabriel" data-i18n-alt="portraitAlt" loading="eager" width="164" height="164">
         </div>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Carlos Gabriel Leite Carretts<span class="accent-dot">.</span></h1>
+        <p class="hero-role" data-i18n="heroRole">Estudante de Sistemas de Informação & desenvolvedor em formação.</p>
+        <p class="hero-intro" data-i18n="heroIntro">Gosto de transformar problemas em soluções claras, explorando lógica, organização de código e desenvolvimento web.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos"><span data-i18n="seeProjects">Explorar projetos</span><span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://github.com/GabrielCarretts" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-bottom">
+          <span class="location"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i18n="location">Lages, SC · Brasil</span></span>
+          <span class="hero-divider">/</span>
+          <span data-i18n="learning">Sempre aprendendo</span>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p>Built with HTML & CSS by Carlos Gabriel</p>
-    </footer>
-</body>
 
+    <div class="container"><div class="section-rule"></div></div>
+
+    <section class="section container" id="projetos" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">01 / <span data-i18n="sectionWork">TRABALHO</span></p>
+          <h2 id="projects-title" data-i18n="projectsTitle">Projetos em destaque<span class="accent-dot">.</span></h2>
+          <p class="section-lead" data-i18n="projectsLead">Uma seleção de exercícios e aplicações que demonstram minha evolução em diferentes linguagens.</p>
+        </div>
+        <a class="text-link all-repos" href="https://github.com/GabrielCarretts?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepositories">Todos os repositórios</span><span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="project-toolbar">
+        <div class="filter-group" role="group" aria-label="Filtrar projetos" data-i18n-aria="filterLabel">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true" data-i18n="filterAll">Todos</button>
+          <button type="button" class="filter" data-filter="logic" aria-pressed="false" data-i18n="filterLogic">Lógica & dados</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false" data-i18n="filterWeb">Web</button>
+        </div>
+        <span class="project-count" id="project-count" aria-live="polite">04 projetos</span>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="logic">
+          <div class="project-art art-csharp" aria-hidden="true">
+            <span class="art-top">01 / CONSOLE</span>
+            <span class="art-glyph art-braces">{ C# }</span>
+            <span class="art-foot">.NET 10 <span>—</span> ALGORITHMS</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>01</span><span class="meta-rule"></span><span>C# / .NET</span></div>
+            <h3>AllInOne</h3>
+            <p data-i18n="allInOneDescription">Aplicação de console que reúne nove utilitários e algoritmos, incluindo cifra de César, Collatz e cálculos tributários, separando menus e lógica.</p>
+            <ul class="tag-list" aria-label="Tecnologias"><li>C#</li><li>.NET</li><li>Switch expressions</li></ul>
+            <a class="project-link" href="https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne" target="_blank" rel="noopener noreferrer"><span data-i18n="viewCode">Ver código</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="logic">
+          <div class="project-art art-library" aria-hidden="true">
+            <span class="art-top">02 / DATA</span>
+            <span class="art-glyph art-books"><span></span><span></span><span></span><span></span></span>
+            <span class="art-foot">C++ <span>—</span> VECTORS & ANALYTICS</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>02</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
+            <h3>Library Database</h3>
+            <p data-i18n="libraryDescription">Sistema de cadastro de livros e revistas com vetores dinâmicos, validação de entrada, médias por categoria e busca por extremos.</p>
+            <ul class="tag-list" aria-label="Tecnologias"><li>C++</li><li>STL Vector</li><li data-i18n="tagAnalysis">Análise de dados</li></ul>
+            <a class="project-link" href="https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database" target="_blank" rel="noopener noreferrer"><span data-i18n="viewCode">Ver código</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="logic">
+          <div class="project-art art-hotel" aria-hidden="true">
+            <span class="art-top">03 / BUSINESS LOGIC</span>
+            <span class="art-glyph art-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            <span class="art-foot">C++ <span>—</span> BILLING SYSTEM</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>03</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
+            <h3>Hotel Sono Bom</h3>
+            <p data-i18n="hotelDescription">Simulador de faturamento hoteleiro com categorias de quartos, tarifas adicionais, serviços, impostos e resumo detalhado da conta.</p>
+            <ul class="tag-list" aria-label="Tecnologias"><li>C++</li><li data-i18n="tagRules">Regras de negócio</li><li data-i18n="tagValidation">Validação</li></ul>
+            <a class="project-link" href="https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager" target="_blank" rel="noopener noreferrer"><span data-i18n="viewCode">Ver código</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-art art-tasks" aria-hidden="true">
+            <span class="art-top">04 / FRONT-END</span>
+            <div class="art-checklist"><span><i>✓</i><b></b></span><span><i>✓</i><b></b></span><span><i></i><b></b></span></div>
+            <span class="art-foot">JS <span>—</span> DOM & EVENTS</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>04</span><span class="meta-rule"></span><span>JAVASCRIPT / WEB</span></div>
+            <h3>Task List</h3>
+            <p data-i18n="taskDescription">Lista de tarefas interativa com inclusão, conclusão e exclusão de itens, contadores em tempo real e alternância entre temas.</p>
+            <ul class="tag-list" aria-label="Tecnologias"><li>JavaScript</li><li>DOM</li><li>HTML / CSS</li></ul>
+            <a class="project-link" href="https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app" target="_blank" rel="noopener noreferrer"><span data-i18n="viewCode">Ver código</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="container"><div class="section-rule"></div></div>
+
+    <section class="section container about-section" id="sobre" aria-labelledby="about-title">
+      <div class="about-main">
+        <p class="section-index">02 / <span data-i18n="sectionAbout">QUEM SOU</span></p>
+        <h2 id="about-title" data-i18n="aboutTitle">Curiosidade que vira código<span class="accent-dot">.</span></h2>
+        <p data-i18n="aboutP1">Sou estudante de Sistemas de Informação na UNIPLAC, em Lages (SC). Tenho construído minha base em programação por meio de projetos práticos e desafios acadêmicos.</p>
+        <p data-i18n="aboutP2">Meu foco está em entender a lógica por trás das soluções, escrever código mais organizado e evoluir continuamente nas áreas de desenvolvimento de software e web.</p>
+        <a class="text-link" href="https://github.com/GabrielCarretts" target="_blank" rel="noopener noreferrer"><span data-i18n="followGithub">Acompanhe minha evolução no GitHub</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="about-aside">
+        <div class="aside-block">
+          <h3 data-i18n="stackTitle">Tecnologias em estudo</h3>
+          <div class="tech-list"><span>C#</span><span>C++</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Git & GitHub</span></div>
+        </div>
+        <div class="aside-block">
+          <h3 data-i18n="educationTitle">Formação</h3>
+          <div class="education-item"><strong>UNIPLAC</strong><span data-i18n="uniplac">Sistemas de Informação · cursando</span></div>
+          <div class="education-item"><strong>SENAI</strong><span data-i18n="senai">Informática aplicada a ambientes profissionais</span></div>
+        </div>
+        <div class="aside-block">
+          <h3 data-i18n="languagesTitle">Idiomas</h3>
+          <p class="aside-text" data-i18n="languagesValue">Português (nativo) · Inglês (fluente)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div>
+          <p class="section-index">03 / <span data-i18n="sectionContact">CONTATO</span></p>
+          <h2 id="contact-title" data-i18n="contactTitle">Vamos conversar<span class="accent-dot">?</span></h2>
+          <p data-i18n="contactLead">Aberto a trocar ideias, aprender e conhecer oportunidades em tecnologia.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:gabrielcarretts@gmail.com"><span data-i18n="sendEmail">Enviar e-mail</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/GabrielCarretts" target="_blank" rel="noopener noreferrer">github.com/GabrielCarretts <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Carlos Gabriel Leite Carretts</span>
+      <span data-i18n="footerNote">Feito com HTML, CSS & JavaScript.</span>
+      <a href="#inicio" data-i18n="backToTop">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+  <noscript><p class="noscript-note">O conteúdo está disponível sem JavaScript, mas os filtros e a troca de tema/idioma precisam dele. / Content is visible without JavaScript, but filters and theme/language switching require it.</p></noscript>
+</body>
 </html>

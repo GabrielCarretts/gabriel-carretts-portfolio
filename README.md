@@ -1,51 +1,38 @@
-# Personal Portfolio Website
+# Carlos Gabriel — Portfolio
 
-## Description
-
-This is a simple personal portfolio website built using HTML and CSS.
-
-It presents basic information about me, along with my projects and skills, as part of my learning process in web development.
-
----
-
-## Technologies Used
-
-* HTML5
-* CSS3 (Flexbox and Grid)
-
----
+A minimalist, responsive, bilingual personal portfolio built with **HTML, CSS, and vanilla JavaScript**.
 
 ## Features
 
-* Responsive layout
-* Semantic HTML structure
-* Organized sections (About, Projects, Contact)
-* Basic styling with CSS
+- **PT-BR / EN-US** language switcher (persists across visits)
+- **Light / dark mode**, with system preference as default and a saved manual override
+- **Project filters** (all, programming logic & data, web) and a live visible-project counter
+- Four featured projects verified against their actual GitHub folders
+- Responsive layout, keyboard focus styles, skip link, semantic sections, and reduced-motion support
+- No dependencies, build tools, or API keys
 
----
+## Projects
 
-## How to Run
+1. [AllInOne — C# / .NET](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne): modular menu of nine algorithms and utilities.
+2. [Library Database — C++](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database): dynamic vectors, validation and collection analytics.
+3. [Hotel Sono Bom — C++](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager): billing logic, additional charges, and taxes.
+4. [Task List — JavaScript](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app): task interactions, DOM manipulation, theme and progress counters.
 
-1. Download or clone the repository:
+## Run locally
 
-   ```
-   git clone <your-repo-link>
-   ```
+Clone this repository and open `index.html` in a browser. You can also use VS Code's Live Server extension. No install or compilation needed.
 
-2. Open the project folder
+## Structure
 
-3. Open `index.html` in your browser
+- `index.html` — accessible, semantic page and project cards.
+- `style.css` — responsive components and CSS light/dark design tokens.
+- `script.js` — translations, language/theme persistence, filters and counter.
+- `img/foto-curriculo.jpeg` — existing portrait image from the original portfolio.
 
----
+## Customize
 
-## Future Improvements
+- Update copy in the `translations` object in `script.js` (and the Portuguese HTML fallback).
+- Update projects in the `#project-grid` section of `index.html`. Each card uses `data-category="logic"` or `data-category="web"`.
+- Adjust CSS custom properties at the top of `style.css` for colors.
 
-* Add JavaScript for interactivity
-* Improve design and layout
-* Add more projects
-
----
-
-## Notes
-
-This project was created as part of my first semester studies and will be improved over time.
+The previous portfolio is preserved in Git history. The updated portfolio works as a static website and is compatible with GitHub Pages.
