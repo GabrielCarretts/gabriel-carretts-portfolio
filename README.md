@@ -1,38 +1,91 @@
-# Carlos Gabriel — Portfolio
+# Carlos Gabriel — Portfólio | Portfolio
 
-A minimalist, responsive, bilingual personal portfolio built with **HTML, CSS, and vanilla JavaScript**.
+**Português** · [English](#english)
 
-## Features
+## Português
 
-- **PT-BR / EN-US** language switcher (persists across visits)
-- **Light / dark mode**, with system preference as default and a saved manual override
-- **Project filters** (all, programming logic & data, web) and a live visible-project counter
-- Four featured projects verified against their actual GitHub folders
-- Responsive layout, keyboard focus styles, skip link, semantic sections, and reduced-motion support
-- No dependencies, build tools, or API keys
+Portfólio pessoal de **Carlos Gabriel Leite Carretts**, estudante de Sistemas de Informação na UNIPLAC. Desenvolvido com HTML, CSS e JavaScript puro para apresentar projetos acadêmicos e minha evolução em programação, bancos de dados e desenvolvimento web.
 
-## Projects
+### Funcionalidades
 
-1. [AllInOne — C# / .NET](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne): modular menu of nine algorithms and utilities.
-2. [Library Database — C++](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database): dynamic vectors, validation and collection analytics.
-3. [Hotel Sono Bom — C++](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager): billing logic, additional charges, and taxes.
-4. [Task List — JavaScript](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app): task interactions, DOM manipulation, theme and progress counters.
+- Interface responsiva com visual simples e minimalista
+- Alternância de tema claro/escuro com preferência salva
+- Troca de idioma **PT-BR / EN-US**
+- Filtros de projetos: **Todos**, **SQL & dados**, **Programação** e **Web**
+- Contador de projetos atualizado conforme o filtro
+- Navegação semântica, foco visível para teclado e suporte a redução de movimento
+- Site estático, sem frameworks ou dependências de build
 
-## Run locally
+### Projetos em destaque
 
-Clone this repository and open `index.html` in a browser. You can also use VS Code's Live Server extension. No install or compilation needed.
+| Projeto | Tecnologias | O que demonstra |
+|---|---|---|
+| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Banco relacional acadêmico com 8 tabelas, 9 relacionamentos por chave estrangeira e 14 consultas utilizando JOIN, GROUP BY, HAVING, subconsultas e CTEs. Inclui diagrama EER. |
+| [AllInOne](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne) | C# / .NET | Aplicação de console com nove utilitários e algoritmos, menus e métodos de lógica separados. |
+| [Library Database](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database) | C++ | Cadastro dinâmico de itens, validação de dados e análises de médias e valores extremos. |
+| [Hotel Sono Bom](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager) | C++ | Simulação de cobrança hoteleira com regras de negócio, serviços, taxas e relatório de valores. |
+| [Task List](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app) | HTML, CSS, JavaScript | Interface interativa com manipulação do DOM, eventos, tarefas e indicadores de progresso. |
 
-## Structure
+> Os projetos representam estudos acadêmicos e aplicações de aprendizagem; não são apresentados como experiência profissional.
 
-- `index.html` — accessible, semantic page and project cards.
-- `style.css` — responsive components and CSS light/dark design tokens.
-- `script.js` — translations, language/theme persistence, filters and counter.
-- `img/foto-curriculo.jpeg` — existing portrait image from the original portfolio.
+### Como executar
 
-## Customize
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/GabrielCarretts/gabriel-carretts-portfolio.git
+   ```
+2. Entre na pasta `gabriel-carretts-portfolio`.
+3. Abra `index.html` no navegador (ou use o Live Server do VS Code).
 
-- Update copy in the `translations` object in `script.js` (and the Portuguese HTML fallback).
-- Update projects in the `#project-grid` section of `index.html`. Each card uses `data-category="logic"` or `data-category="web"`.
-- Adjust CSS custom properties at the top of `style.css` for colors.
+Não é necessário instalar pacotes.
 
-The previous portfolio is preserved in Git history. The updated portfolio works as a static website and is compatible with GitHub Pages.
+### Estrutura do projeto
+
+- `index.html` — estrutura e cards dos projetos
+- `style.css` — estilos, responsividade e temas
+- `script.js` — traduções, filtros, preferências e interatividade
+- `img/` — imagem de perfil e demais imagens do repositório
+
+---
+
+## English
+
+Personal portfolio of **Carlos Gabriel Leite Carretts**, an Information Systems student at UNIPLAC. Built with vanilla HTML, CSS, and JavaScript to showcase coursework and growth in programming, databases, and web development.
+
+### Features
+
+- Responsive, minimal interface
+- Light/dark theme with saved preference
+- **PT-BR / EN-US** language switch
+- Project filters: **All**, **SQL & data**, **Programming**, **Web**
+- Live visible-project counter
+- Semantic navigation, visible keyboard focus, and reduced-motion support
+- Static website: no framework or build dependencies
+
+### Featured projects
+
+| Project | Stack | Demonstrates |
+|---|---|---|
+| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Academic relational database with 8 tables, 9 foreign-key relationships and 14 queries using JOIN, GROUP BY, HAVING, subqueries and CTEs. Includes an EER diagram. |
+| [AllInOne](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne) | C# / .NET | Console app combining nine utilities and algorithms, with menu and logic methods separated. |
+| [Library Database](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database) | C++ | Dynamic catalog, input validation and statistical analyses. |
+| [Hotel Sono Bom](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager) | C++ | Hotel billing exercise with business rules, services, taxes and reporting. |
+| [Task List](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app) | HTML, CSS, JavaScript | Interactive task management, DOM manipulation and progress counters. |
+
+> These are educational projects, not claims of professional experience.
+
+### Run locally
+
+```bash
+git clone https://github.com/GabrielCarretts/gabriel-carretts-portfolio.git
+```
+
+Open `index.html` in a browser, or use VS Code's Live Server. No installation or build step is required.
+
+### Customize
+
+Edit the projects in `index.html`, update translations in `script.js`, and customize light/dark tokens in `style.css`.
+
+---
+
+**Autor / Author:** Carlos Gabriel Leite Carretts · [GitHub](https://github.com/GabrielCarretts)
