@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Portfólio de Carlos Gabriel Leite Carretts. Projetos em C#, C++, HTML, CSS e JavaScript.">
+  <meta name="description" content="Portfólio de Carlos Gabriel Leite Carretts: projetos acadêmicos em MySQL, C#, C++ e JavaScript.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Carlos Gabriel — Portfólio">
   <meta property="og:description" content="Projetos de desenvolvimento de software, lógica e interfaces web.">
@@ -56,7 +56,7 @@
       <div class="hero-copy">
         <h1 id="hero-title">Carlos Gabriel Leite Carretts<span class="accent-dot">.</span></h1>
         <p class="hero-role" data-i18n="heroRole">Estudante de Sistemas de Informação & desenvolvedor em formação.</p>
-        <p class="hero-intro" data-i18n="heroIntro">Gosto de transformar problemas em soluções claras, explorando lógica, organização de código e desenvolvimento web.</p>
+        <p class="hero-intro" data-i18n="heroIntro">Exploro programação, bancos de dados e desenvolvimento web por meio de projetos práticos e aprendizado contínuo.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projetos"><span data-i18n="seeProjects">Explorar projetos</span><span aria-hidden="true">↗</span></a>
           <a class="button button-secondary" href="https://github.com/GabrielCarretts" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span aria-hidden="true">↗</span></a>
@@ -76,7 +76,7 @@
         <div>
           <p class="section-index">01 / <span data-i18n="sectionWork">TRABALHO</span></p>
           <h2 id="projects-title" data-i18n="projectsTitle">Projetos em destaque<span class="accent-dot">.</span></h2>
-          <p class="section-lead" data-i18n="projectsLead">Uma seleção de exercícios e aplicações que demonstram minha evolução em diferentes linguagens.</p>
+          <p class="section-lead" data-i18n="projectsLead">Projetos acadêmicos selecionados pela complexidade da lógica, modelagem de dados e aplicações práticas.</p>
         </div>
         <a class="text-link all-repos" href="https://github.com/GabrielCarretts?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="allRepositories">Todos os repositórios</span><span aria-hidden="true">↗</span></a>
       </div>
@@ -84,21 +84,43 @@
       <div class="project-toolbar">
         <div class="filter-group" role="group" aria-label="Filtrar projetos" data-i18n-aria="filterLabel">
           <button type="button" class="filter is-active" data-filter="all" aria-pressed="true" data-i18n="filterAll">Todos</button>
-          <button type="button" class="filter" data-filter="logic" aria-pressed="false" data-i18n="filterLogic">Lógica & dados</button>
+          <button type="button" class="filter" data-filter="data" aria-pressed="false" data-i18n="filterData">SQL & dados</button>
+          <button type="button" class="filter" data-filter="logic" aria-pressed="false" data-i18n="filterLogic">Programação</button>
           <button type="button" class="filter" data-filter="web" aria-pressed="false" data-i18n="filterWeb">Web</button>
         </div>
-        <span class="project-count" id="project-count" aria-live="polite">04 projetos</span>
+        <span class="project-count" id="project-count" aria-live="polite">05 projetos</span>
       </div>
 
       <div class="project-grid" id="project-grid">
+        <article class="project-card project-featured" data-category="data">
+          <div class="project-art art-sql" aria-hidden="true">
+            <span class="art-top">01 / DATABASE CASE STUDY</span>
+            <div class="sql-schema">
+              <div class="sql-table"><strong>leitores</strong><span>PK · id_leitor</span><span>nome</span></div>
+              <span class="sql-connector"></span>
+              <div class="sql-table"><strong>emprestimos</strong><span>PK · id_emprestimo</span><span>FK · leitor_id</span></div>
+              <span class="sql-connector"></span>
+              <div class="sql-table"><strong>livros</strong><span>PK · id_livro</span><span>titulo</span></div>
+            </div>
+            <span class="art-foot">MYSQL 8.0 <span>—</span> RELATIONAL MODEL</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>01</span><span class="meta-rule"></span><span>SQL / MYSQL 8.0</span><span class="featured-label" data-i18n="featuredLabel">DESTAQUE</span></div>
+            <h3>Biblioteca do Carlos</h3>
+            <p data-i18n="sqlDescription">Estudo de caso acadêmico de banco de dados para biblioteca: 8 tabelas relacionadas, 9 chaves estrangeiras e 14 consultas para analisar empréstimos, leitores, livros e pagamentos.</p>
+            <ul class="tag-list" aria-label="Tecnologias"><li>MySQL</li><li>JOIN / GROUP BY</li><li data-i18n="tagSubqueries">Subconsultas / CTEs</li><li data-i18n="tagModeling">Modelagem relacional</li></ul>
+            <a class="project-link" href="https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos" target="_blank" rel="noopener noreferrer"><span data-i18n="viewProject">Ver projeto e diagrama EER</span><span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
         <article class="project-card" data-category="logic">
           <div class="project-art art-csharp" aria-hidden="true">
-            <span class="art-top">01 / CONSOLE</span>
+            <span class="art-top">02 / CONSOLE</span>
             <span class="art-glyph art-braces">{ C# }</span>
             <span class="art-foot">.NET 10 <span>—</span> ALGORITHMS</span>
           </div>
           <div class="project-content">
-            <div class="project-meta"><span>01</span><span class="meta-rule"></span><span>C# / .NET</span></div>
+            <div class="project-meta"><span>02</span><span class="meta-rule"></span><span>C# / .NET</span></div>
             <h3>AllInOne</h3>
             <p data-i18n="allInOneDescription">Aplicação de console que reúne nove utilitários e algoritmos, incluindo cifra de César, Collatz e cálculos tributários, separando menus e lógica.</p>
             <ul class="tag-list" aria-label="Tecnologias"><li>C#</li><li>.NET</li><li>Switch expressions</li></ul>
@@ -108,12 +130,12 @@
 
         <article class="project-card" data-category="logic">
           <div class="project-art art-library" aria-hidden="true">
-            <span class="art-top">02 / DATA</span>
+            <span class="art-top">03 / DATA</span>
             <span class="art-glyph art-books"><span></span><span></span><span></span><span></span></span>
             <span class="art-foot">C++ <span>—</span> VECTORS & ANALYTICS</span>
           </div>
           <div class="project-content">
-            <div class="project-meta"><span>02</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
+            <div class="project-meta"><span>03</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
             <h3>Library Database</h3>
             <p data-i18n="libraryDescription">Sistema de cadastro de livros e revistas com vetores dinâmicos, validação de entrada, médias por categoria e busca por extremos.</p>
             <ul class="tag-list" aria-label="Tecnologias"><li>C++</li><li>STL Vector</li><li data-i18n="tagAnalysis">Análise de dados</li></ul>
@@ -123,12 +145,12 @@
 
         <article class="project-card" data-category="logic">
           <div class="project-art art-hotel" aria-hidden="true">
-            <span class="art-top">03 / BUSINESS LOGIC</span>
+            <span class="art-top">04 / BUSINESS LOGIC</span>
             <span class="art-glyph art-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             <span class="art-foot">C++ <span>—</span> BILLING SYSTEM</span>
           </div>
           <div class="project-content">
-            <div class="project-meta"><span>03</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
+            <div class="project-meta"><span>04</span><span class="meta-rule"></span><span>C++ / CONSOLE</span></div>
             <h3>Hotel Sono Bom</h3>
             <p data-i18n="hotelDescription">Simulador de faturamento hoteleiro com categorias de quartos, tarifas adicionais, serviços, impostos e resumo detalhado da conta.</p>
             <ul class="tag-list" aria-label="Tecnologias"><li>C++</li><li data-i18n="tagRules">Regras de negócio</li><li data-i18n="tagValidation">Validação</li></ul>
@@ -138,12 +160,12 @@
 
         <article class="project-card" data-category="web">
           <div class="project-art art-tasks" aria-hidden="true">
-            <span class="art-top">04 / FRONT-END</span>
+            <span class="art-top">05 / FRONT-END</span>
             <div class="art-checklist"><span><i>✓</i><b></b></span><span><i>✓</i><b></b></span><span><i></i><b></b></span></div>
             <span class="art-foot">JS <span>—</span> DOM & EVENTS</span>
           </div>
           <div class="project-content">
-            <div class="project-meta"><span>04</span><span class="meta-rule"></span><span>JAVASCRIPT / WEB</span></div>
+            <div class="project-meta"><span>05</span><span class="meta-rule"></span><span>JAVASCRIPT / WEB</span></div>
             <h3>Task List</h3>
             <p data-i18n="taskDescription">Lista de tarefas interativa com inclusão, conclusão e exclusão de itens, contadores em tempo real e alternância entre temas.</p>
             <ul class="tag-list" aria-label="Tecnologias"><li>JavaScript</li><li>DOM</li><li>HTML / CSS</li></ul>
@@ -159,14 +181,14 @@
       <div class="about-main">
         <p class="section-index">02 / <span data-i18n="sectionAbout">QUEM SOU</span></p>
         <h2 id="about-title" data-i18n="aboutTitle">Curiosidade que vira código<span class="accent-dot">.</span></h2>
-        <p data-i18n="aboutP1">Sou estudante de Sistemas de Informação na UNIPLAC, em Lages (SC). Tenho construído minha base em programação por meio de projetos práticos e desafios acadêmicos.</p>
-        <p data-i18n="aboutP2">Meu foco está em entender a lógica por trás das soluções, escrever código mais organizado e evoluir continuamente nas áreas de desenvolvimento de software e web.</p>
+        <p data-i18n="aboutP1">Sou estudante de Sistemas de Informação na UNIPLAC, em Lages (SC). Tenho construído minha base em programação e bancos de dados por meio de projetos práticos e desafios acadêmicos.</p>
+        <p data-i18n="aboutP2">Busco entender a lógica das soluções, modelar dados, organizar código e continuar evoluindo em desenvolvimento de software.</p>
         <a class="text-link" href="https://github.com/GabrielCarretts" target="_blank" rel="noopener noreferrer"><span data-i18n="followGithub">Acompanhe minha evolução no GitHub</span><span aria-hidden="true">↗</span></a>
       </div>
       <div class="about-aside">
         <div class="aside-block">
           <h3 data-i18n="stackTitle">Tecnologias em estudo</h3>
-          <div class="tech-list"><span>C#</span><span>C++</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Git & GitHub</span></div>
+          <div class="tech-list"><span>SQL / MySQL</span><span>C# / .NET</span><span>C++</span><span>JavaScript</span><span>HTML5 / CSS3</span><span>Git & GitHub</span></div>
         </div>
         <div class="aside-block">
           <h3 data-i18n="educationTitle">Formação</h3>
