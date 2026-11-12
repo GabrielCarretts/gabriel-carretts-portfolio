@@ -112,6 +112,12 @@ html[data-theme="dark"] .sql-table strong { background: #465d9b; }
   .sql-table strong { font-size: 9px; }
   .sql-table > span { font-size: 8px; padding-inline: 4px; }
 }
+@media (max-width: 350px) {
+  .sql-table { width: 68px; }
+  .sql-connector { width: 7px; }
+  .sql-table strong { font-size: 8px; padding-inline: 3px; }
+  .sql-table > span { font-size: 7px; padding-inline: 3px; }
+}
 .project-card { overflow: hidden; min-width: 0; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); transition: transform .25s, box-shadow .25s, border-color .25s; }
 .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--accent); }
 .project-card[hidden] { display: none !important; }
