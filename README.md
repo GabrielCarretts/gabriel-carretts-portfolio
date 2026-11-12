@@ -20,9 +20,8 @@ Portfólio pessoal de **Carlos Gabriel Leite Carretts**, estudante de Sistemas d
 
 | Projeto | Tecnologias | O que demonstra |
 |---|---|---|
-| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Banco relacional acadêmico com 8 tabelas, 9 relacionamentos por chave estrangeira e 14 consultas utilizando JOIN, GROUP BY, HAVING, subconsultas e CTEs. Inclui diagrama EER. |
 | [AllInOne](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne) | C# / .NET | Aplicação de console com nove utilitários e algoritmos, menus e métodos de lógica separados. |
-| [Library Database](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database) | C++ | Cadastro dinâmico de itens, validação de dados e análises de médias e valores extremos. |
+| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Banco relacional acadêmico com 8 tabelas, 9 relacionamentos por chave estrangeira e 14 consultas utilizando JOIN, GROUP BY, HAVING, subconsultas e CTEs. Inclui diagrama EER. |
 | [Hotel Sono Bom](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager) | C++ | Simulação de cobrança hoteleira com regras de negócio, serviços, taxas e relatório de valores. |
 | [Task List](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app) | HTML, CSS, JavaScript | Interface interativa com manipulação do DOM, eventos, tarefas e indicadores de progresso. |
 
@@ -66,9 +65,8 @@ Personal portfolio of **Carlos Gabriel Leite Carretts**, an Information Systems 
 
 | Project | Stack | Demonstrates |
 |---|---|---|
-| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Academic relational database with 8 tables, 9 foreign-key relationships and 14 queries using JOIN, GROUP BY, HAVING, subqueries and CTEs. Includes an EER diagram. |
 | [AllInOne](https://github.com/GabrielCarretts/college-c-sharp/tree/main/AllInOne) | C# / .NET | Console app combining nine utilities and algorithms, with menu and logic methods separated. |
-| [Library Database](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/library_database) | C++ | Dynamic catalog, input validation and statistical analyses. |
+| [Biblioteca do Carlos](https://github.com/GabrielCarretts/sql-college/tree/main/projects/biblioteca-carlos) | MySQL 8.0, SQL | Academic relational database with 8 tables, 9 foreign-key relationships and 14 queries using JOIN, GROUP BY, HAVING, subqueries and CTEs. Includes an EER diagram. |
 | [Hotel Sono Bom](https://github.com/GabrielCarretts/college-c-plus-plus/tree/main/hotel_sono_bom_manager) | C++ | Hotel billing exercise with business rules, services, taxes and reporting. |
 | [Task List](https://github.com/GabrielCarretts/college-html-css-js/tree/main/task-list-app) | HTML, CSS, JavaScript | Interactive task management, DOM manipulation and progress counters. |
 
